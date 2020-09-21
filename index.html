@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function () {
+                var mvp = document.getElementById('testViewport');
+                mvp.setAttribute('content','width=device-width, initial-scale=1.0');
+        }
+    </script>
     <title>Vivek Kumar - instagram - github - twitter</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,7 +78,7 @@
             </div>
 
             <div class="con-posts">
-                <a class="post" target="_blank" href="https://www.figma.com/proto/8BqKym763W14mA492kgho5/todo-design?node-id=1%3A2&scaling=scale-down">
+                <a class="post" id="anchor" target="_blank" href="https://www.figma.com/proto/8BqKym763W14mA492kgho5/todo-design?node-id=4%3A315&scaling=scale-down">
                     <div class="con-file">
                         <img src="to do app design.jpeg" alt="">
                     </div>
@@ -392,6 +398,13 @@
             menu.querySelector('button:nth-child(3)').classList.add('active')
         }
     })
+
+    $("#anchor").click(function (e) {
+        e.preventDefault();
+        var mvp = document.getElementById('testViewport');
+        mvp.setAttribute('content','width=1024');
+    });
+
 </script>
 <style>
     body {
