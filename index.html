@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function () {
+                var mvp = document.getElementById('testViewport');
+                mvp.setAttribute('content','width=device-width, initial-scale=1.0');
+        }
+    </script>
     <title>Vivek Kumar - instagram - github - twitter</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -354,6 +360,7 @@
     const contents = document.querySelector('.con-contents')
     const links = document.querySelector('.con-contents .con-links')
     const posts = document.querySelector('.con-contents .con-posts')
+    const atag = document.getElementById('anchor')
     window.addEventListener("load", function(event) {
         const vh = window.innerHeight * 0.01
         document.documentElement.style.setProperty('--vh', `${vh}px`)
@@ -393,8 +400,10 @@
         }
     })
 
-    $(".con-posts a").click(function (e) {
-        document.getElementById("viewport").setAttribute("content", "width=1024, initial-scale=0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes");
+    atag.addEventListener('click', function(){
+        console.log("Clicked");
+        var mvp = document.getElementById('testViewport');
+        mvp.setAttribute('content','width=1024');
     });
 
 </script>
